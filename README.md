@@ -1,6 +1,6 @@
 # Iotapp Device Library
 
-Each folder contains firmware for the following supported microcontrollers:
+Each folder contains firmware for the following WiFi enabled microcontrollers:
 
 - Generic ESP8266 and NodeMCU 1.0 modules. 
 - ESP32
