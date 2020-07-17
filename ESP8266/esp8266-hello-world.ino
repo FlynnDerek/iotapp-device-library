@@ -41,7 +41,7 @@ if(WiFi.status()== WL_CONNECTED){   //Check WiFi connection status
  
    HTTPClient http;    //Declare httpClient
  
-   http.begin(apiKey); //Pass apiKey as the connection string
+   http.begin(urlKey); //Pass apiKey as the connection string
    http.addHeader("Content-Type", "application/json");  //Specify content-type header
  
  int httpCode = http.POST(JSONmessageBuffer);   //Send the request
