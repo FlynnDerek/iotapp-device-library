@@ -1,5 +1,7 @@
 /* iotapp - ESP32 - Local Weather App Sketch - Using a standard ESP32 and BME280 sensor, we can get the local
 temperature, humidity, pressure and altitude. The sensor readings are read and posted via HTTPS to the iotapp console.*/
+
+// Dependencies
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <Wire.h>
@@ -46,7 +48,7 @@ void loop() {
   if(WiFi.status()== WL_CONNECTED){   //Check WiFi connection status
     
   StaticJsonBuffer<300> JSONbuffer;   //Declaring static JSON buffer
-  JsonObject& JSONencoder = JSONbuffer.createObject();
+  JsonObject& JSONencoder = JSONbuffer.createObject(); //Create new JSON object
 
   // Get the sensor readings
   String temperature = String(1.8 * bme.readTemperature() + 32); //Get the temperature
@@ -61,7 +63,7 @@ void loop() {
 
    HTTPClient http; 
    http.begin(urlKey, fingerprint);  //Pass fingerprint and URL key
-   http.addHeader("Content-Type", "application/json"); //Content tyle should always be application/json
+   http.addHeader("Content-Type", "application/json"); //Content style should always be "application/json"
    int httpResponseCode = http.POST(JSONmessageBuffer);  //Send the POST request
    if(httpResponseCode>0){
     String response = http.getString(); //Get the response 
