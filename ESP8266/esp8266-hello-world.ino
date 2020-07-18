@@ -28,7 +28,7 @@ void setup() {
 void loop() {
 
  randNumber = random(300); //initialize a random number
- Serial.println(randNumber) //print random number
+ Serial.println(randNumber); //print random number
  delay(50);
 
 if(WiFi.status()== WL_CONNECTED){   //Check WiFi connection status
