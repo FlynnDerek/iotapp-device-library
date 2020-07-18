@@ -1,17 +1,19 @@
-//iotapp - ESP8266 Hello World template
+//iotapp - ESP8266 - Hello World Sketch - This program generates a random number and posts via HTTPS to the iotapp console. 
 
 //Dependencies
 #include <ESP8266HTTPClient.h>
 #include <ESP8266WiFi.h>
 #include <ArduinoJson.h>
 
-#define LED 2
+//  Insert your Wifi credentials, then your given channel URL in the iotapp console. 
+ String wifiName = "YOUR_WIFI_NAME"; 
+ String wifiPass = "YOUR_WIFI_PASS";
+ String urlKey = "YOUR_IOTAPP_URL"; // Example: https://iotappbe.com:5001/api/DyUlKq8quK7G9lWQsEwXvGTROR4rv5Yo
+ const char* fingerprint = "b1 8d c5 3c a6 e4 e2 6b 68 20 64 88 bc 3b dd fe af 22 51 12"; //iotapp fingerprint
 
- String wifiName = "WifiName"; // Your WiFi network handle
- String wifiPass = "password"; // Your WiFi network password
- String urlKey = "MY_URL_KEY"; // Your iotapp URL key
- long randNumber; // random integer 
   
+#define LED 2 //initalize LED 2
+long randNumber = 0; // initalize random integer 
  
 void setup() {
   Serial.begin(115200);  //Serial connection
@@ -25,12 +27,10 @@ void setup() {
  
 void loop() {
 
-  
- randNumber = random(300);
- Serial.println(randNumber);
-  delay(50);
+ randNumber = random(300); //initialize a random number
+ Serial.println(randNumber) //print random number
+ delay(50);
 
- 
 if(WiFi.status()== WL_CONNECTED){   //Check WiFi connection status
   StaticJsonBuffer<300> JSONbuffer;   //Declaring static JSON buffer
   JsonObject& JSONencoder = JSONbuffer.createObject();
@@ -41,7 +41,7 @@ if(WiFi.status()== WL_CONNECTED){   //Check WiFi connection status
  
    HTTPClient http;    //Declare httpClient
  
-   http.begin(urlKey); //Pass apiKey as the connection string
+   http.begin(urlKey, fingerprint); //Pass args
    http.addHeader("Content-Type", "application/json");  //Specify content-type header
  
  int httpCode = http.POST(JSONmessageBuffer);   //Send the request
