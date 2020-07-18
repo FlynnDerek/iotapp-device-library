@@ -57,7 +57,7 @@ void loop() {
   // String altitude = String(bme.readAltitude(SEALEVELPRESSURE_HPA)); //Get the altitude
   // String pressure = String(bme.readPressure() / 100.0F); //Get the pressure
 
-  //You can set the format how the data is displayed inside the String below. 
+  //You can format how the data is displayed inside the string below. 
   JSONencoder["value"] = String("Temperature = " + temperature + " *F" + ", Humidity = " + humidity + " %");
   char JSONmessageBuffer[300];
   JSONencoder.prettyPrintTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
