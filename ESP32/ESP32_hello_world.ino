@@ -1,4 +1,4 @@
-/* iotapp - ESP32 - Hello World Sketch - This program generates a random number and posts via HTTPS to the iotapp console. */
+/* iotapp - ESP32 - Hello World Sketch - This program generates a random number and posts via HTTPS to the iotapp console.  */
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
