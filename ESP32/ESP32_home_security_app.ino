@@ -1,6 +1,5 @@
 /* iotapp - ESP32 - Home/Building Security App - Using a standard ESP32 and PIR Motion sensor, we can detect
-movement up to a 110 degree angle in a 20 meter area. The sensor readings are read and posted via HTTPS to the iotapp console.
-*/
+movement up to a 110 degree angle in a 20 meter area. The sensor readings are read and posted via HTTPS to the iotapp console. */
 
 // Dependencies
 #include <WiFi.h>
