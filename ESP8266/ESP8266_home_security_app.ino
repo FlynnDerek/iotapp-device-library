@@ -1,7 +1,6 @@
 /* iotapp - ESP8266 - Home/Building Security App - Using a generic ESP8266 module and PIR Motion sensor, we can detect
 movement up to a 110 degree angle in a 20 meter area. The sensor readings are read and posted via HTTPS to your channel in the
-iotapp console.
-*/
+iotapp console. */
 
 //Dependencies
 #include <ESP8266HTTPClient.h>
