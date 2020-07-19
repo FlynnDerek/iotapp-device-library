@@ -1,6 +1,5 @@
 /* iotapp - ESP8266 - Local Weather App Sketch - Using a standard ESP32 and BME280 sensor, we can get the local
-temperature, humidity, pressure and altitude. The sensor readings are read and posted via HTTPS to the iotapp console.
-*/
+temperature, humidity, pressure and altitude. The sensor readings are read and posted via HTTPS to the iotapp console. */
 
 // Dependencies
 #include <ESP8266HTTPClient.h>
