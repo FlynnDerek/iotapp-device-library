@@ -4,7 +4,6 @@ Each folder contains firmware for the following WiFi enabled microcontrollers:
 
 - Generic ESP8266 and NodeMCU 1.0 modules. 
 - ESP32
-- Arduino Nano 33 IoT
 
 
 
