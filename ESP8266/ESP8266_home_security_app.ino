@@ -11,7 +11,7 @@ iotapp console. */
 const char* wifiName = "YOUR_WIFI_NAME";
 const char* wifiPass =  "YOUR_WIFI_PASSWORD";
 String urlKey = "YOUR_IOTAPP_CHANNEL_URL"; // Example: https://iotappbe.com:5001/api/DyUlKq8quK7G9lWQsEwXvGTROR4rv5Yo
-const char* fingerprint = "b1 8d c5 3c a6 e4 e2 6b 68 20 64 88 bc 3b dd fe af 22 51 12"; //iotapp fingerprint
+const char* fingerprint = "b8 78 0b c3 95 b2 0a 72 8d 8e a6 26 29 b9 71 3a 3f c2 26 12"; //iotapp fingerprint
 
 // Movement alert to be pushed to the iotapp console (Example: "Movement Detected - Hallway")
 String Status = "Movement Detected";
